@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Form</title>
+    <style>
+        #image-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showImage(event) {
+            event.preventDefault(); // Prevent form from submitting
+            document.getElementById('image-container').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h1>Answer the Question</h1>
+    <form onsubmit="showImage(event)">
+        <label for="question">What is your favorite color?</label><br>
+        <input type="text" id="question" name="question" required><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="image-container">
+        <h2>Here is your image:</h2>
+        <img src="path_to_your_image.jpg" alt="Your Image" width="300">
+    </div>
+</body>
+</html>
